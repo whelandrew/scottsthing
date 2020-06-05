@@ -1,38 +1,133 @@
-.App {
+.App 
+{
   text-align: center;
+  background-color: #767482;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainTitle
+{
+	width: 50%;
+	float: left;
+	margin-left: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainImage
+{
+	width:15%;
+	float:left;
+	margin-top:60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.mainImage img
+{
+	width:100%;
 }
 
-.App-link {
-  color: #61dafb;
+.mainHeader
+{
+	top:0;
+	background-color:#4a4646;	
+	position:fixed;
+	width:100%;
+	z-index:10;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainHeader div
+{
+	float:right;	
+}
+
+.mainHeader p
+{	
+	width: 50%;
+	margin-top: 5px;
+}
+
+.mainHeader a
+{
+	display:inline;
+	padding-top:6px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:6px;	
+}	
+
+a
+{
+	text-decoration: none;	
+	color:black;
+}
+
+a:visited
+{
+	color: black;
+}
+
+a:hover
+{
+	color: white;
+	background-color:#a23030;
+}
+
+.mainBody
+{
+	background-image: url('./Resources/photo_2020-06-05_09-54-20.jpg');
+	height:1280px;
+	background-repeat: no-repeat;
+	display: block;
+	background-position: center;
+	padding-top:1px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	margin-top:60px;
+}
+
+.itemContainer
+{
+	border: 2px solid black;
+	display: inline-block;
+	text-align: center;
+	background-color:#767482;  
+	width:33%;
+	margin: 50px;
+}
+
+.itemContainer ul
+{
+	text-align: left;
+	list-style-type: none;
+}
+
+.itemContainer img
+{
+	margin-top:12px;
+	padding:3px;
+	width:95%;
+}
+
+
+#shoppingCart
+{
+	padding-left: 290px;	
+	background-color:#4a4646;	
+}
+
+fa-shopping-cart
+{	
+	font-size:36px;	
+}
+
+footer
+{	
+	width:100%;
+	background-color:#4a4646;	
+	height:50px;
+}
+
+footer a
+{	
+	font-size:20px;
+	padding-left:20px;
+	padding-right:20px;
 }

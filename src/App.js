@@ -1,26 +1,54 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, withRouter} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import title from './Resources/siteTitle.png';
+
+import Home from './Home';
+import Products from './Products';
+import Projects from './Projects';
+import About from './About';
+import ShoppingCart from './ShoppingCart';
+
+class App extends React.Component 
+{	
+	render()
+	{
+		return (
+			<div className="App">
+				<header className="mainHeader">				
+				<div>
+					<a id="shoppingCart" href="/shoppingCart"> <i className="fa fa-shopping-cart"></i> </a>
+					<p>			
+						<a href="/">Home</a>
+						<a href="/products">Products</a>
+						<a href="/projects">Projects</a>
+						<a href="/about">About</a>
+						<a href="https://www.etsy.com/" target="_blank">Etsy</a>
+					</p>
+				</div>				
+				</header>
+				<div className="mainImage">
+					<img src={title} alt="logo"/>
+				</div>	
+				<div className = "mainBody">			
+					<Route exact path='/' component={Home}/>
+					<Route exact path='/products' component={Products}/>
+					<Route exact path='/projects' component={Projects}/>
+					<Route exact path='/about' component={About}/>
+					<Route exact path='/shoppingCart' component={ShoppingCart}/>
+				</div>
+				<footer className="footer">
+					<p>
+						<a href="/">Home</a>
+						<a href="mailto:scott@scott.scott">scott@scott.scott</a>
+						<a href="">867-5309</a>
+						<a href="https://www.etsy.com/" target="_blank"><i className="fab fa-etsy"></i></a>
+					</p>
+				</footer>
+			</div>
+		);
+	}
 }
 
-export default App;
+export default withRouter(App);
